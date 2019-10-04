@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#212121</color>
+    <color name="colorPrimaryDark">#334657</color>
+    <color name="colorAccent">#cfd8dc</color>
+    <color name="lightPrimaryColor">#f5f5f5</color>
+    <color name="text_icons">#212121</color>
+    <color name="text_color">#FFFFFF</color>
+    <color name="primaryText">#212121</color>
+    <color name="secondaryText">#757575</color>
+    <color name="dividerColor">#BDBDBD</color>
+    <color name="hintColor">#BDBDBD</color>
+    <color name="toolbarColor">#2F4050</color>
+    <color name="textColorPrimary">#FFFFFF</color>
+    <color name="textColorSecundary">#FFFFFF</color>
+    <color name="backgroundListview">#44334657</color>
+    <color name="description_listview">#fff59d</color>
+    <color name="descricption_listview_dark">#ffee58</color>
+    <color name="textview_main_activity">#26a69a</color>
+</resources>
