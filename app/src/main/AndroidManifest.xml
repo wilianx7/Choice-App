@@ -10,7 +10,7 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
         <activity
-            android:name=".view.AdministrationLoginActivity"
+            android:name=".view.RegisterCompany"
             android:parentActivityName=".view.MainActivity"
             android:windowSoftInputMode="stateHidden">
             <meta-data
@@ -18,7 +18,15 @@
                 android:value="com.app.choice.view.MainActivity" />
         </activity>
         <activity
-            android:name=".view.CommercialLoginActivity"
+            android:name=".administration.view.AdministrationLoginActivity"
+            android:parentActivityName=".view.MainActivity"
+            android:windowSoftInputMode="stateHidden">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.app.choice.view.MainActivity" />
+        </activity>
+        <activity
+            android:name=".commercial.view.CommercialLoginActivity"
             android:parentActivityName=".view.MainActivity"
             android:windowSoftInputMode="stateHidden">
             <meta-data

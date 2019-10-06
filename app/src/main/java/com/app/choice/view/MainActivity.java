@@ -9,6 +9,8 @@ import android.widget.Button;
 import android.widget.TextView;
 
 import com.app.choice.R;
+import com.app.choice.administration.view.AdministrationLoginActivity;
+import com.app.choice.commercial.view.CommercialLoginActivity;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -21,6 +23,7 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
+        /** Referenciando elementos da view **/
         btn_commercial = findViewById(R.id.commercial_button);
         btn_Administration = findViewById(R.id.administration_button);
         createAccount = findViewById(R.id.create_account);
@@ -28,10 +31,12 @@ public class MainActivity extends AppCompatActivity {
         setButtonsActions();
     }
 
+    /** Ações onClick **/
     private void setButtonsActions(){
         btn_commercial.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+                /** Login Comercial **/
                 Intent intent = new Intent(MainActivity.this, CommercialLoginActivity.class);
                 startActivity(intent);
             }
@@ -40,6 +45,7 @@ public class MainActivity extends AppCompatActivity {
         btn_Administration.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+                /** Login Administrador **/
                 Intent intent = new Intent(MainActivity.this, AdministrationLoginActivity.class);
                 startActivity(intent);
             }
@@ -48,7 +54,9 @@ public class MainActivity extends AppCompatActivity {
         createAccount.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                /** Abrir cadastro de estabelecimento **/
+                /** Cadastro de Empresa **/
+                Intent intent = new Intent(MainActivity.this, RegisterCompany.class);
+                startActivity(intent);
             }
         });
     }
