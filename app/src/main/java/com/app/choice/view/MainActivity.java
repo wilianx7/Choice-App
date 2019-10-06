@@ -28,11 +28,12 @@ public class MainActivity extends AppCompatActivity {
         btn_Administration = findViewById(R.id.administration_button);
         createAccount = findViewById(R.id.create_account);
 
+        /** Ações onClick **/
         setButtonsActions();
     }
 
     /** Ações onClick **/
-    private void setButtonsActions(){
+    private void setButtonsActions() {
         btn_commercial.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
