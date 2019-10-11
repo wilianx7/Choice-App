@@ -10,7 +10,6 @@ import android.widget.TextView;
 
 import com.app.choice.R;
 import com.app.choice.administration.view.AdministrationLoginActivity;
-import com.app.choice.commercial.view.CommercialLoginActivity;
 import com.app.choice.commercial.view.CommercialPizzaList;
 
 public class MainActivity extends AppCompatActivity {
@@ -33,7 +32,9 @@ public class MainActivity extends AppCompatActivity {
         setButtonsActions();
     }
 
-    /** Ações onClick **/
+    /**
+     * Ações onClick
+     **/
     private void setButtonsActions() {
         btn_commercial.setOnClickListener(new View.OnClickListener() {
             @Override

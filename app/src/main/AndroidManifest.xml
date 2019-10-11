@@ -9,9 +9,13 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".commercial.view.CommercialPizzaList"
-                  android:configChanges="orientation|screenSize">
-        </activity>
+        <activity
+            android:name=".administration.view.AdministrationNavigationDrawer"
+            android:label="@string/title_activity_administration_navigation_drawer"
+            android:theme="@style/AppTheme.NoActionBar"></activity>
+        <activity
+            android:name=".commercial.view.CommercialPizzaList"
+            android:configChanges="orientation|screenSize"></activity>
         <activity android:name=".commercial.view.CommercialHomeActivity" />
         <activity
             android:name=".view.RegisterCompany"

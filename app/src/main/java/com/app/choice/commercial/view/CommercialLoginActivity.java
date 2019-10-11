@@ -39,7 +39,9 @@ public class CommercialLoginActivity extends AppCompatActivity {
         setButtonActions();
     }
 
-    /** Ações onClick **/
+    /**
+     * Ações onClick
+     **/
     private void setButtonActions() {
         btn_login.setOnClickListener(new View.OnClickListener() {
             @Override

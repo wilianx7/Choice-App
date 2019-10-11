@@ -12,7 +12,7 @@
     <color name="hintColor">#BDBDBD</color>
     <color name="toolbarColor">#03516b</color>
     <color name="alertDialogColor">#03516b</color>
-    <color name="floatingButtonColor">#0066a7</color>
+    <color name="floatingButtonColor">#333</color>
     <color name="textColorPrimary">#FFFFFF</color>
     <color name="textColorSecundary">#FFFFFF</color>
     <color name="backgroundPizzaAccepted">#2E8B57</color>

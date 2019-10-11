@@ -90,7 +90,7 @@ public class CommercialPizzaList extends AppCompatActivity {
     @Override
     public boolean onOptionsItemSelected(MenuItem item) {
 
-        switch (item.getItemId()){
+        switch (item.getItemId()) {
             case R.id.action_help_id:
                 openHelpDialog();
                 return true;
@@ -120,8 +120,8 @@ public class CommercialPizzaList extends AppCompatActivity {
         helpDialog.setTitle("Ajuda");
         helpDialog.setCancelable(true);
         helpDialog.setMessage("INCLUIR: deslize o dedo sobre a pizza no sentido direito. \n\n" +
-                              "EXCLUIR: deslize o dedo sobre a pizza no sentido esquerdo. \n\n" +
-                              "CONFIRMAR: para confirmar clique no botão flutuante.");
+                "EXCLUIR: deslize o dedo sobre a pizza no sentido esquerdo. \n\n" +
+                "CONFIRMAR: para confirmar clique no botão flutuante.");
 
         helpDialog.setPositiveButton("Confirmar", new DialogInterface.OnClickListener() {
             @Override
@@ -163,8 +163,8 @@ public class CommercialPizzaList extends AppCompatActivity {
 
         ImageView pizzaIcon = new ImageView(CommercialPizzaList.this);
         pizzaIcon.setImageResource(R.drawable.white_pizza_icon);
-        pizzaIcon.setMaxWidth(500);
-        pizzaIcon.setMaxHeight(500);
+        pizzaIcon.setMaxWidth(400);
+        pizzaIcon.setMaxHeight(400);
         pizzaIcon.setMinimumHeight(100);
         pizzaIcon.setMinimumWidth(100);
         pizzaIcon.setAdjustViewBounds(true);

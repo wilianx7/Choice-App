@@ -31,7 +31,7 @@ public class CommercialPizzaListAdapter extends ArrayAdapter<CommercialPizzaMode
         /*** Verifica se não existe o objeto view criado,
          pois a view utilizada é armazenada no cash do
          android e fica na variável convertView ***/
-        if(view == null){
+        if (view == null) {
             /** Inicializa o objeto para montagem da view **/
             LayoutInflater layoutInflater = (LayoutInflater) context.getSystemService(context.LAYOUT_INFLATER_SERVICE);
 
@@ -40,7 +40,7 @@ public class CommercialPizzaListAdapter extends ArrayAdapter<CommercialPizzaMode
         }
 
         /** Verifica se existem pizzas **/
-        if(pizzasArray.size() > 0){
+        if (pizzasArray.size() > 0) {
             TextView pizzaName = view.findViewById(R.id.pizza_name);
             TextView pizzaDescription = view.findViewById(R.id.pizza_description);
             ImageView pizzaIcon = view.findViewById(R.id.pizza_icon);
@@ -51,7 +51,7 @@ public class CommercialPizzaListAdapter extends ArrayAdapter<CommercialPizzaMode
             pizzaDescription.setText(pizza.getIngredients());
             pizzaIcon.setImageResource(R.drawable.white_admin_icon);
 
-            if(pizza.isAccepted()){
+            if (pizza.isAccepted()) {
                 view.setBackgroundColor(Color.parseColor("#2E8B57"));
                 view.getBackground().setAlpha(100);
             } else {
