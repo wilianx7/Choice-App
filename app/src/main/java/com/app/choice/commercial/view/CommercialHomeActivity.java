@@ -40,7 +40,9 @@ public class CommercialHomeActivity extends AppCompatActivity {
         setButtonsActions();
     }
 
-    /** Ações onClick **/
+    /**
+     * Ações onClick
+     **/
     private void setButtonsActions() {
         btn_request_caster.setOnClickListener(new View.OnClickListener() {
             @Override

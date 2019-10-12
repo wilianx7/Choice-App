@@ -1,3 +1,22 @@
 <resources>
     <string name="app_name">Choice</string>
+    <string name="title_activity_administration_navigation_drawer">Choice
+    </string>
+    <string name="navigation_drawer_open">Open navigation drawer</string>
+    <string name="navigation_drawer_close">Close navigation drawer</string>
+    <string name="nav_header_title">Android Studio</string>
+    <string name="nav_header_subtitle">android.studio@android.com</string>
+    <string name="nav_header_desc">Navigation header</string>
+    <string name="action_settings">Settings</string>
+
+    <string name="menu_home">Início</string>
+    <string name="menu_tables">Mesas</string>
+    <string name="menu_tablets">Tablets</string>
+    <string name="menu_pizzas">Pizzas</string>
+    <string name="menu_casters">Rodízios</string>
+    <string name="menu_employees">Funcionários</string>
+    <string name="menu_commands">Comandas</string>
+
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
 </resources>
