@@ -43,7 +43,7 @@ public class TablesFragment extends Fragment {
 
         listView = view.findViewById(R.id.listview_table_fragment);
         progressBar = view.findViewById(R.id.progressBar_table_fragment);
-        tableButton = view.findViewById(R.id.table_button);
+        tableButton = view.findViewById(R.id.table_add_button);
 
         tablesArray = new ArrayList<>();
 
