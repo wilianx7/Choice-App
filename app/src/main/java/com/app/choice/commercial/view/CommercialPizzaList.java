@@ -76,7 +76,7 @@ public class CommercialPizzaList extends AppCompatActivity {
         onSwipeTouchListener = new OnSwipeTouchListener(CommercialPizzaList.this, listView, adapter);
         listView.setOnTouchListener(onSwipeTouchListener);
 
-        addActionsListener();
+        setButtonsActions();
     }
 
     @Override
@@ -98,7 +98,7 @@ public class CommercialPizzaList extends AppCompatActivity {
         }
     }
 
-    private void addActionsListener() {
+    private void setButtonsActions() {
         floatingActionButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
