@@ -40,7 +40,6 @@ public class CommercialPizzaList extends AppCompatActivity {
         // Configurar Toolbar.
         toolbar = findViewById(R.id.pizza_list_toolbar);
         toolbar.setTitle("Rodízio de Pizzas");
-        toolbar.setNavigationIcon(R.drawable.ic_arrow_back);
         setSupportActionBar(toolbar);
 
         listView = findViewById(R.id.pizza_list_view);
@@ -142,7 +141,7 @@ public class CommercialPizzaList extends AppCompatActivity {
         confirmDialog.setPositiveButton("Confirmar", new DialogInterface.OnClickListener() {
             @Override
             public void onClick(DialogInterface dialog, int which) {
-                // CONFIRMAR SELEÇÃO
+                //TODO: CONFIRMAR SELEÇÃO
             }
         });
 

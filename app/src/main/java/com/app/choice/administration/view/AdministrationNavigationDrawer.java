@@ -9,6 +9,13 @@ import androidx.appcompat.app.ActionBarDrawerToggle;
 
 import android.view.MenuItem;
 
+import com.app.choice.administration.view.Fragments.CommandsFragment;
+import com.app.choice.administration.view.Fragments.HomeFragment;
+import com.app.choice.administration.view.Fragments.PizzaCastersFragment;
+import com.app.choice.administration.view.Fragments.PizzasFragment;
+import com.app.choice.administration.view.Fragments.TablesFragment;
+import com.app.choice.administration.view.Fragments.TabletsFragment;
+import com.app.choice.administration.view.Fragments.UsersFragment;
 import com.google.android.material.navigation.NavigationView;
 
 import androidx.drawerlayout.widget.DrawerLayout;
@@ -106,4 +113,5 @@ public class AdministrationNavigationDrawer extends AppCompatActivity
         drawer.closeDrawer(GravityCompat.START);
         return true;
     }
+
 }

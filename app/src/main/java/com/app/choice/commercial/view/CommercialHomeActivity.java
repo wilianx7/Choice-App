@@ -3,6 +3,7 @@ package com.app.choice.commercial.view;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.widget.Toolbar;
 
+import android.content.Intent;
 import android.graphics.PorterDuff;
 import android.os.Bundle;
 import android.view.View;
@@ -52,6 +53,11 @@ public class CommercialHomeActivity extends AppCompatActivity {
                 progressBar.setVisibility(View.VISIBLE);
                 btn_request_caster.setEnabled(false);
                 btn_request_caster.getBackground().setAlpha(100);
+
+                //TODO: ABRIR LISTAGEM DE PIZZAS SOMENTE APÓS A LIBERAÇÃO DA COMANDA
+                /** Tela escolha de pizzas **/
+                Intent intent = new Intent(CommercialHomeActivity.this, CommercialPizzaList.class);
+                startActivity(intent);
             }
         });
     }

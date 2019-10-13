@@ -6,14 +6,14 @@ public class PizzaCasterModel {
     private Integer id;
     private Integer establishment_id;
     private String name;
-    private Date date;
+    private Date created_date;
     private boolean is_active;
 
     public PizzaCasterModel(Integer id, Integer establishment_id, String name, Date date, boolean is_active) {
         this.id = id;
         this.establishment_id = establishment_id;
         this.name = name;
-        this.date = date;
+        this.created_date = date;
         this.is_active = is_active;
     }
 
@@ -44,12 +44,12 @@ public class PizzaCasterModel {
         this.name = name;
     }
 
-    public Date getDate() {
-        return date;
+    public Date getCreated_date() {
+        return created_date;
     }
 
-    public void setDate(Date date) {
-        this.date = date;
+    public void setCreated_date(Date date) {
+        this.created_date = date;
     }
 
     public boolean is_active() {
