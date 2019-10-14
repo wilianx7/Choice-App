@@ -9,16 +9,48 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
+        <activity android:name=".administration.view.AdministrationPizzaList"></activity>
+        <activity
+            android:name=".administration.view.Registers.UserRegister"
+            android:configChanges="orientation|screenSize"
+            android:windowSoftInputMode="stateHidden" />
+        <activity
+            android:name=".administration.view.Registers.CommandRegister"
+            android:configChanges="orientation|screenSize"
+            android:windowSoftInputMode="stateHidden" />
+        <activity
+            android:name=".administration.view.Registers.PizzaCasterRegister"
+            android:configChanges="orientation|screenSize"
+            android:windowSoftInputMode="stateHidden" />
+        <activity
+            android:name=".administration.view.Registers.TabletRegister"
+            android:configChanges="orientation|screenSize"
+            android:windowSoftInputMode="stateHidden" />
+        <activity
+            android:name=".administration.view.Registers.TableRegister"
+            android:configChanges="orientation|screenSize"
+            android:windowSoftInputMode="stateHidden" />
+        <activity
+            android:name=".administration.view.Registers.PizzaRegister"
+            android:configChanges="orientation|screenSize"
+            android:parentActivityName=".administration.view.AdministrationNavigationDrawer"
+            android:windowSoftInputMode="stateHidden">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.app.choice.administration.view.AdministrationNavigationDrawer" />
+        </activity>
         <activity
             android:name=".administration.view.AdministrationNavigationDrawer"
+            android:configChanges="orientation|screenSize"
             android:label="@string/title_activity_administration_navigation_drawer"
-            android:theme="@style/AppTheme.NoActionBar"></activity>
+            android:theme="@style/AppTheme.NoActionBar" />
         <activity
             android:name=".commercial.view.CommercialPizzaList"
-            android:configChanges="orientation|screenSize"></activity>
+            android:configChanges="orientation|screenSize" />
         <activity android:name=".commercial.view.CommercialHomeActivity" />
         <activity
             android:name=".view.RegisterCompany"
+            android:configChanges="orientation|screenSize"
             android:parentActivityName=".view.MainActivity"
             android:windowSoftInputMode="stateHidden">
             <meta-data
@@ -27,6 +59,7 @@
         </activity>
         <activity
             android:name=".administration.view.AdministrationLoginActivity"
+            android:configChanges="orientation|screenSize"
             android:parentActivityName=".view.MainActivity"
             android:windowSoftInputMode="stateHidden">
             <meta-data
@@ -35,6 +68,7 @@
         </activity>
         <activity
             android:name=".commercial.view.CommercialLoginActivity"
+            android:configChanges="orientation|screenSize"
             android:parentActivityName=".view.MainActivity"
             android:windowSoftInputMode="stateHidden">
             <meta-data

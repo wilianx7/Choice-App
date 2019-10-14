@@ -1,6 +1,7 @@
-package com.app.choice.administration.view;
+package com.app.choice.administration.view.Fragments;
 
 
+import android.content.Intent;
 import android.os.Bundle;
 
 import androidx.fragment.app.Fragment;
@@ -15,6 +16,7 @@ import android.widget.ProgressBar;
 import com.app.choice.R;
 import com.app.choice.administration.adapter.TablesFragmentListAdapter;
 import com.app.choice.administration.model.TableModel;
+import com.app.choice.administration.view.Registers.TableRegister;
 import com.google.android.material.floatingactionbutton.FloatingActionButton;
 
 import java.util.ArrayList;
@@ -43,7 +45,7 @@ public class TablesFragment extends Fragment {
 
         listView = view.findViewById(R.id.listview_table_fragment);
         progressBar = view.findViewById(R.id.progressBar_table_fragment);
-        tableButton = view.findViewById(R.id.table_button);
+        tableButton = view.findViewById(R.id.table_add_button);
 
         tablesArray = new ArrayList<>();
 
@@ -61,6 +63,19 @@ public class TablesFragment extends Fragment {
         adapter = new TablesFragmentListAdapter(getActivity(), tablesArray);
         listView.setAdapter(adapter);
 
+        setButtonActions();
+
         return view;
+    }
+
+    private void setButtonActions() {
+        tableButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                /** Cadastro de Mesas **/
+                Intent intent = new Intent(getActivity(), TableRegister.class);
+                startActivity(intent);
+            }
+        });
     }
 }

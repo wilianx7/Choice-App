@@ -6,7 +6,6 @@ public class PizzaModel {
     private String ingredients;
     private String iconUrl;
     private boolean available;
-    private boolean isAccepted = true;
 
     public PizzaModel(Integer id, String flavor, String ingredients, boolean available) {
         this.id = id;
@@ -53,13 +52,5 @@ public class PizzaModel {
 
     public void setIconUrl(String iconUrl) {
         this.iconUrl = iconUrl;
-    }
-
-    public boolean isAccepted() {
-        return isAccepted;
-    }
-
-    public void setAccepted(boolean accepted) {
-        isAccepted = accepted;
     }
 }

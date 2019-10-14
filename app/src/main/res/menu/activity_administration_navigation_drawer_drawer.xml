@@ -22,7 +22,7 @@
             android:title="@string/menu_pizzas" />
         <item
             android:id="@+id/nav_casters"
-            android:icon="@drawable/ic_pizza_white"
+            android:icon="@drawable/white_pizza_icon"
             android:title="@string/menu_casters" />
         <item
             android:id="@+id/nav_employees"
@@ -30,7 +30,7 @@
             android:title="@string/menu_employees" />
         <item
             android:id="@+id/nav_commands"
-            android:icon="@drawable/ic_note_white"
+            android:icon="@drawable/ic_action_document"
             android:title="@string/menu_commands" />
     </group>
 

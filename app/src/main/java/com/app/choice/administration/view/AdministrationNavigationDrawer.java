@@ -9,6 +9,13 @@ import androidx.appcompat.app.ActionBarDrawerToggle;
 
 import android.view.MenuItem;
 
+import com.app.choice.administration.view.Fragments.CommandsFragment;
+import com.app.choice.administration.view.Fragments.HomeFragment;
+import com.app.choice.administration.view.Fragments.PizzaCastersFragment;
+import com.app.choice.administration.view.Fragments.PizzasFragment;
+import com.app.choice.administration.view.Fragments.TablesFragment;
+import com.app.choice.administration.view.Fragments.TabletsFragment;
+import com.app.choice.administration.view.Fragments.UsersFragment;
 import com.google.android.material.navigation.NavigationView;
 
 import androidx.drawerlayout.widget.DrawerLayout;
@@ -36,6 +43,9 @@ public class AdministrationNavigationDrawer extends AppCompatActivity
         drawer.addDrawerListener(toggle);
         toggle.syncState();
         navigationView.setNavigationItemSelectedListener(this);
+
+        getSupportFragmentManager().beginTransaction().replace(R.id.fragment_container, new HomeFragment()).commit();
+        toolbar.setTitle("Choice");
     }
 
     @Override
@@ -77,24 +87,31 @@ public class AdministrationNavigationDrawer extends AppCompatActivity
         int id = item.getItemId();
 
         if (id == R.id.nav_home) {
-            // Handle the camera action
+            getSupportFragmentManager().beginTransaction().replace(R.id.fragment_container, new HomeFragment()).commit();
+            toolbar.setTitle("Choice");
         } else if (id == R.id.nav_table) {
             getSupportFragmentManager().beginTransaction().replace(R.id.fragment_container, new TablesFragment()).commit();
             toolbar.setTitle("Mesas");
         } else if (id == R.id.nav_tablet) {
-
+            getSupportFragmentManager().beginTransaction().replace(R.id.fragment_container, new TabletsFragment()).commit();
+            toolbar.setTitle("Tablets");
         } else if (id == R.id.nav_casters) {
-
+            getSupportFragmentManager().beginTransaction().replace(R.id.fragment_container, new PizzaCastersFragment()).commit();
+            toolbar.setTitle("Rodízios");
         } else if (id == R.id.nav_commands) {
-
+            getSupportFragmentManager().beginTransaction().replace(R.id.fragment_container, new CommandsFragment()).commit();
+            toolbar.setTitle("Comandas");
         } else if (id == R.id.nav_pizzas) {
-
+            getSupportFragmentManager().beginTransaction().replace(R.id.fragment_container, new PizzasFragment()).commit();
+            toolbar.setTitle("Pizzas");
         } else if (id == R.id.nav_employees) {
-
+            getSupportFragmentManager().beginTransaction().replace(R.id.fragment_container, new UsersFragment()).commit();
+            toolbar.setTitle("Funcionários");
         }
 
         DrawerLayout drawer = findViewById(R.id.drawer_layout);
         drawer.closeDrawer(GravityCompat.START);
         return true;
     }
+
 }

@@ -1,6 +1,8 @@
 package com.app.choice.commercial.model;
 
-public class CommercialPizzaModel {
+import java.io.Serializable;
+
+public class CommercialPizzaModel implements Serializable {
     private Integer id;
     private String flavor;
     private String ingredients;
