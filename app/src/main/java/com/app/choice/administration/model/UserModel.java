@@ -1,6 +1,8 @@
 package com.app.choice.administration.model;
 
-public class UserModel {
+import java.io.Serializable;
+
+public class UserModel implements Serializable {
     private Integer id;
     private Integer establishment_id;
     private Integer login_id;

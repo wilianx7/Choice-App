@@ -1,6 +1,8 @@
 package com.app.choice.administration.model;
 
-public class PizzaModel {
+import java.io.Serializable;
+
+public class PizzaModel implements Serializable {
     private Integer id;
     private String flavor;
     private String ingredients;

@@ -1,6 +1,8 @@
 package com.app.choice.administration.model;
 
-public class TableModel {
+import java.io.Serializable;
+
+public class TableModel implements Serializable {
     private Integer id;
     private Integer establishment_id;
     private String name;

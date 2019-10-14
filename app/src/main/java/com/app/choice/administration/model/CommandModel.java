@@ -1,8 +1,9 @@
 package com.app.choice.administration.model;
 
+import java.io.Serializable;
 import java.util.Date;
 
-public class CommandModel {
+public class CommandModel implements Serializable {
     private Integer id;
     private Integer caster_has_table_id;
     private Date date;

@@ -1,6 +1,7 @@
 package com.app.choice.administration.view.Fragments;
 
 
+import android.app.Activity;
 import android.content.Intent;
 import android.os.Bundle;
 
@@ -9,6 +10,7 @@ import androidx.fragment.app.Fragment;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 import android.widget.ListView;
 import android.widget.ProgressBar;
@@ -16,6 +18,7 @@ import android.widget.ProgressBar;
 import com.app.choice.R;
 import com.app.choice.administration.adapter.CommandsFragmentListAdapter;
 import com.app.choice.administration.model.CommandModel;
+import com.app.choice.administration.view.Editions.CommandEdit;
 import com.app.choice.administration.view.Registers.CommandRegister;
 import com.google.android.material.floatingactionbutton.FloatingActionButton;
 
@@ -32,6 +35,7 @@ public class CommandsFragment extends Fragment {
 
     private ArrayAdapter<CommandModel> adapter;
     private ArrayList<CommandModel> commandsArray;
+    private Integer extraPosition;
 
 
     public CommandsFragment() {
@@ -50,7 +54,6 @@ public class CommandsFragment extends Fragment {
         commandButton = view.findViewById(R.id.command_add_button);
 
         commandsArray = new ArrayList<>();
-
         commandsArray.add(new CommandModel(1, 1, new Date(), true));
         commandsArray.add(new CommandModel(2, 2, new Date(), true));
         commandsArray.add(new CommandModel(3, 3, new Date(), true));
@@ -77,5 +80,33 @@ public class CommandsFragment extends Fragment {
                 startActivity(intent);
             }
         });
+
+        listView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
+            @Override
+            public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
+                extraPosition = position;
+                /** Inicia uma nova activity e espera por um resultado **/
+                Intent intent = new Intent(getActivity(), CommandEdit.class);
+                intent.putExtra("command", commandsArray.get(extraPosition));
+                startActivityForResult(intent, 1);
+            }
+        });
+    }
+
+    /** Método para recuperar o retorno da activity chamada **/
+    @Override
+    public void onActivityResult(int requestCode, int resultCode, Intent data) {
+        super.onActivityResult(requestCode, resultCode, data);
+
+        if (requestCode == 1) {
+            if (resultCode == Activity.RESULT_OK) {
+                commandsArray.get(extraPosition).setActive(false);
+
+                adapter.notifyDataSetChanged();
+            }
+            if (resultCode == Activity.RESULT_CANCELED) {
+                //Write your code if there's no result
+            }
+        }
     }
 }

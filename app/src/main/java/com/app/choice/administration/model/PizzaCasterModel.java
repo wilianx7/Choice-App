@@ -1,8 +1,9 @@
 package com.app.choice.administration.model;
 
+import java.io.Serializable;
 import java.util.Date;
 
-public class PizzaCasterModel {
+public class PizzaCasterModel implements Serializable {
     private Integer id;
     private Integer establishment_id;
     private String name;
