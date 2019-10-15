@@ -15,38 +15,44 @@ import android.widget.EditText;
 import android.widget.ProgressBar;
 
 import com.app.choice.R;
-import com.app.choice.administration.model.PizzaModel;
+import com.app.choice.administration.model.UserModel;
 
-public class PizzaEdit extends AppCompatActivity {
+public class UserEdit extends AppCompatActivity {
     private Toolbar toolbar;
-    private EditText edit_flavor;
-    private EditText edit_ingredients;
+    private EditText edit_name;
+    private EditText edit_cellphone;
+    private EditText edit_email;
+    private EditText edit_password;
+    private EditText edit_password_confirmation;
     private CheckBox checkBox_situation;
     private Button save_button;
     private ProgressBar progressBar;
 
-    private PizzaModel pizzaModel;
+    private UserModel userModel;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_pizza_edit);
+        setContentView(R.layout.activity_user_edit);
 
         /** Referenciando elementos da view **/
-        toolbar = findViewById(R.id.pizza_edit_toolbar);
-        edit_flavor = findViewById(R.id.pizza_edit_flavor);
-        edit_ingredients = findViewById(R.id.pizza_edit_ingredients);
-        checkBox_situation = findViewById(R.id.pizza_edit_checkbox);
-        save_button = findViewById(R.id.pizza_edit_button);
-        progressBar = findViewById(R.id.pizza_edit_progressBar);
+        toolbar = findViewById(R.id.user_edit_toolbar);
+        edit_name = findViewById(R.id.user_edit_name);
+        edit_cellphone = findViewById(R.id.user_edit_cellphone);
+        edit_email = findViewById(R.id.user_edit_email);
+        edit_password = findViewById(R.id.user_edit_password);
+        edit_password_confirmation = findViewById(R.id.user_edit_password_confirmation);
+        checkBox_situation = findViewById(R.id.user_edit_checkbox);
+        save_button = findViewById(R.id.user_edit_button);
+        progressBar = findViewById(R.id.user_edit_progressBar);
 
         /** Toolbar **/
-        toolbar.setTitle("Edição Pizza");
+        toolbar.setTitle("Edição Funcionário");
         setSupportActionBar(toolbar);
 
-        /** Recuperar pizza selecionada **/
+        /** Recuperar funcionário selecionado **/
         Intent intent = getIntent();
-        pizzaModel = (PizzaModel) intent.getSerializableExtra("pizza");
+        userModel = (UserModel) intent.getSerializableExtra("user");
 
         setButtonsActions();
         setFieldData();
@@ -61,7 +67,7 @@ public class PizzaEdit extends AppCompatActivity {
                     save_button.setVisibility(View.GONE);
                     progressBar.setVisibility(View.VISIBLE);
                     Intent returnIntent = new Intent();
-                    returnIntent.putExtra("result", pizzaModel);
+                    returnIntent.putExtra("result", userModel);
                     setResult(Activity.RESULT_OK, returnIntent);
                     finish();
                 } catch (Exception error) {
@@ -74,9 +80,10 @@ public class PizzaEdit extends AppCompatActivity {
     }
 
     private void setFieldData() {
-        edit_flavor.setText(pizzaModel.getFlavor());
-        edit_ingredients.setText(pizzaModel.getIngredients());
-        checkBox_situation.setChecked(pizzaModel.isAvailable());
+        edit_name.setText(userModel.getName());
+        edit_cellphone.setText(userModel.getCell_phone());
+        edit_email.setText(userModel.getLogin_id().toString());
+        checkBox_situation.setChecked(userModel.isActive());
     }
 
     @Override
@@ -90,7 +97,7 @@ public class PizzaEdit extends AppCompatActivity {
 
         switch (item.getItemId()) {
             case R.id.command_action_delete:
-                deletePizza();
+                deleteUser();
                 return true;
             default:
                 return super.onOptionsItemSelected(item);
@@ -98,8 +105,8 @@ public class PizzaEdit extends AppCompatActivity {
 
     }
 
-    private void deletePizza() {
-        //TODO: DELETAR PIZZA
+    private void deleteUser() {
+        //TODO: DELETAR FUNCIONÁRIO
         finish();
     }
 }

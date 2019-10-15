@@ -10,9 +10,13 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
         <activity
-            android:name=".administration.view.Editions.PizzaEdit"
+            android:name=".administration.view.Editions.UserEdit"
             android:configChanges="orientation|screenSize"
             android:windowSoftInputMode="stateHidden"></activity>
+        <activity
+            android:name=".administration.view.Editions.PizzaEdit"
+            android:configChanges="orientation|screenSize"
+            android:windowSoftInputMode="stateHidden" />
         <activity
             android:name=".administration.view.Editions.CommandEdit"
             android:configChanges="orientation|screenSize"

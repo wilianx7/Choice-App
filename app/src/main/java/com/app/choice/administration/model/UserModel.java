@@ -9,6 +9,7 @@ public class UserModel implements Serializable {
     private String name;
     private String cell_phone;
     private boolean isAdmin;
+    private boolean isActive;
 
     public UserModel() {
     }
@@ -68,5 +69,13 @@ public class UserModel implements Serializable {
 
     public void setAdmin(boolean admin) {
         isAdmin = admin;
+    }
+
+    public boolean isActive() {
+        return isActive;
+    }
+
+    public void setActive(boolean active) {
+        isActive = active;
     }
 }
