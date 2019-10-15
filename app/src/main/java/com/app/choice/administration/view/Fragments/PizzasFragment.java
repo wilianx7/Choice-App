@@ -1,6 +1,7 @@
 package com.app.choice.administration.view.Fragments;
 
 
+import android.app.Activity;
 import android.content.Intent;
 import android.os.Bundle;
 
@@ -9,6 +10,7 @@ import androidx.fragment.app.Fragment;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 import android.widget.ListView;
 import android.widget.ProgressBar;
@@ -16,6 +18,7 @@ import android.widget.ProgressBar;
 import com.app.choice.R;
 import com.app.choice.administration.adapter.PizzasFragmentListAdapter;
 import com.app.choice.administration.model.PizzaModel;
+import com.app.choice.administration.view.Editions.PizzaEdit;
 import com.app.choice.administration.view.Registers.PizzaRegister;
 import com.google.android.material.floatingactionbutton.FloatingActionButton;
 
@@ -77,5 +80,30 @@ public class PizzasFragment extends Fragment {
                 startActivity(intent);
             }
         });
+
+        listView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
+            @Override
+            public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
+                /** Inicia uma nova activity e espera por um resultado **/
+                Intent intent = new Intent(getActivity(), PizzaEdit.class);
+                intent.putExtra("pizza", pizzasArray.get(position));
+                startActivityForResult(intent, 1);
+            }
+        });
+    }
+
+    /** Método para recuperar o retorno da activity chamada **/
+    @Override
+    public void onActivityResult(int requestCode, int resultCode, Intent data) {
+        super.onActivityResult(requestCode, resultCode, data);
+
+        if (requestCode == 1) {
+            if (resultCode == Activity.RESULT_OK) {
+                //TODO: TRATAR RETORNO SE NECESSÁRIO
+            }
+            if (resultCode == Activity.RESULT_CANCELED) {
+                //Write your code if there's no result
+            }
+        }
     }
 }

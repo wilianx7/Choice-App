@@ -10,10 +10,10 @@
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        tools:context=".administration.view.Editions.CommandEdit">
+        tools:context=".administration.view.Editions.PizzaEdit">
 
         <include
-            android:id="@+id/command_edit_toolbar"
+            android:id="@+id/pizza_edit_toolbar"
             style="@style/ThemeOverlay.AppCompat.Dark"
             layout="@layout/main_toolbar"
             app:layout_constraintEnd_toEndOf="parent"
@@ -32,7 +32,7 @@
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/command_edit_toolbar">
+            app:layout_constraintTop_toBottomOf="@+id/pizza_edit_toolbar">
 
 
             <ImageView
@@ -46,7 +46,7 @@
                 android:layout_marginTop="20dp"
                 android:layout_marginRight="8dp"
                 android:layout_marginBottom="20dp"
-                app:srcCompat="@drawable/ic_action_document" />
+                app:srcCompat="@drawable/ic_pizza_white" />
 
             <TextView
                 android:id="@+id/textView"
@@ -57,13 +57,13 @@
                 android:layout_marginLeft="9dp"
                 android:layout_marginRight="8dp"
                 android:layout_marginBottom="4dp"
-                android:text="Mesa"
+                android:text="Sabor"
                 android:textSize="@dimen/text_size"
                 android:textStyle="bold"
                 android:typeface="sans" />
 
             <EditText
-                android:id="@+id/command_edit_table"
+                android:id="@+id/pizza_edit_flavor"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="25dp"
@@ -73,7 +73,6 @@
                 android:layout_marginBottom="8dp"
                 android:background="@drawable/textfield_background"
                 android:ems="10"
-                android:enabled="false"
                 android:padding="11dp" />
 
             <TextView
@@ -85,14 +84,14 @@
                 android:layout_marginLeft="9dp"
                 android:layout_marginRight="8dp"
                 android:layout_marginBottom="4dp"
-                android:text="Rodízio"
+                android:text="Ingredientes"
                 android:textSize="@dimen/text_size"
                 android:textStyle="bold"
                 android:typeface="sans" />
 
 
             <EditText
-                android:id="@+id/command_edit_caster"
+                android:id="@+id/pizza_edit_ingredients"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="25dp"
@@ -102,79 +101,35 @@
                 android:layout_marginBottom="8dp"
                 android:background="@drawable/textfield_background"
                 android:ems="10"
-                android:enabled="false"
                 android:padding="11dp" />
 
-            <TextView
-                android:id="@+id/textView4"
+            <CheckBox
+                android:id="@+id/pizza_edit_checkbox"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginStart="25dp"
-                android:layout_marginEnd="25dp"
-                android:layout_marginLeft="9dp"
-                android:layout_marginRight="8dp"
-                android:layout_marginBottom="4dp"
-                android:text="Data abertura"
-                android:textSize="@dimen/text_size"
-                android:textStyle="bold"
-                android:typeface="sans" />
-
-            <EditText
-                android:id="@+id/command_edit_date"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
+                android:text="Disponível"
+                android:textColor="@color/textColorPrimary"
+                android:layout_gravity="center"
                 android:layout_marginStart="25dp"
                 android:layout_marginEnd="25dp"
                 android:layout_marginLeft="8dp"
                 android:layout_marginRight="8dp"
-                android:layout_marginBottom="8dp"
-                android:background="@drawable/textfield_background"
-                android:ems="10"
-                android:enabled="false"
-                android:padding="11dp" />
-
-            <TextView
-                android:id="@+id/textView5"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginStart="25dp"
-                android:layout_marginEnd="25dp"
-                android:layout_marginLeft="9dp"
-                android:layout_marginRight="8dp"
-                android:layout_marginBottom="4dp"
-                android:text="Situação"
-                android:textSize="@dimen/text_size"
-                android:textStyle="bold"
-                android:typeface="sans" />
-
-            <EditText
-                android:id="@+id/command_edit_situation"
-                android:layout_width="match_parent"
-                android:layout_height="46dp"
-                android:layout_marginStart="25dp"
-                android:layout_marginEnd="25dp"
-                android:layout_marginLeft="8dp"
-                android:layout_marginRight="8dp"
-                android:layout_marginBottom="20dp"
-                android:background="@drawable/textfield_background"
-                android:ems="10"
-                android:enabled="false"
-                android:padding="11dp" />
+                android:layout_marginBottom="15dp"/>
 
             <Button
-                android:id="@+id/command_edit_button"
+                android:id="@+id/pizza_edit_button"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="25dp"
                 android:layout_marginEnd="25dp"
                 android:layout_marginBottom="20dp"
                 android:background="@drawable/button_background"
-                android:text="Fechar Comanda"
+                android:text="Salvar"
                 android:textStyle="bold"
                 android:typeface="sans" />
 
             <ProgressBar
-                android:id="@+id/command_edit_progressBar"
+                android:id="@+id/pizza_edit_progressBar"
                 style="?android:attr/progressBarStyle"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
